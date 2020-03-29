@@ -4,7 +4,7 @@ import { success, failure } from "./libs/response-lib";
 import { fail } from "assert";
 
 
-export function main(e, context, cb) {
+export async function main(e, context, cb) {
     // Request body is passed in as a JSON encoded string in 'event.body'
     // It represents the HTTP request parameters
     const data = JSON.parse(e.body);
