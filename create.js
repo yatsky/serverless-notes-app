@@ -14,8 +14,8 @@ export function main(e, context, cb) {
         // using process.env.tableName
         // This variable will be set in serverless.yml
         // Somehow this is not working.
-        // TableName: process.env.tableName,
-        TableName: "notes",
+        TableName: process.env.tableName,
+        //TableName: "notes",
         // 'Item' contains the attributes of the item to be created
         // - 'userId': user identities are federated through the
         //             Cognito Identity Pool, we will use the identity
