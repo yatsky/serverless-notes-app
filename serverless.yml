@@ -30,17 +30,17 @@ provider:
 
 # 'iamRoleStatements' defines the permission policy for the Lambda function.
 # In this case, Lambda function are granted with permissions to access DynamoDB
-iamRoleStatements:
-  - Effect: Allow
-    Action:
-      - dynamodb:DescribeTable
-      - dynamodb:Query
-      - dynamodb:Scan
-      - dynamodb:GetItem
-      - dynamodb:PutItem
-      - dynamodb:UpdateItem
-      - dynamodb:DeleteItem
-    Resource: "arn:aws:dynamodb:ap-southeast-2:025102549644:table/notes"
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:ap-southeast-2:025102549644:table/notes"
 
 functions:
   # defines an HTTP API endpoint that calls the main function in create.js
