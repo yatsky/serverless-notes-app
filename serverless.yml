@@ -48,10 +48,10 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      # restrict our IAM role permissions to
+      # Restrict our IAM role permissions to
       # the specific table for the stage
       Resource:
-        - "Fn::GetAtt": [ NotesTable, Arn]
+        - "Fn::GetAtt": [ NotesTable, Arn ]
 
 functions:
   # defines an HTTP API endpoint that calls the main function in create.js
